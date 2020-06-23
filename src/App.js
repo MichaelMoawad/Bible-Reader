@@ -23,16 +23,6 @@ const App = () => {
     const [loading, setLoading] = useState(false);
     const [currentChapter, setCurrentChapter] = useState(1)
     
-    // TO DO LIST
-
-    // Right Now the app is functioning and outputting the default book and chapter 
-    
-    // find way to change book from NavBar - DONE
-    
-    // find way to change chapter from Pagination or Consider printing the whole Book and having a menu button MAYBE - DONE
-
-    // RE-WATCH THE HOOKS VIDEO 'Why React Hooks?' IT REALLY EXPLAINS IT - DONE
-    
     
     const fetchData = async () => {
         console.log(`this function has run`)

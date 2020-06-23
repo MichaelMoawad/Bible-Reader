@@ -1,0 +1,20 @@
+.chapter-text p{
+    font-size: 15pt !important;
+    margin-bottom: 15pt !important;
+}
+
+.chapter-text {
+    padding-bottom: 0px;
+}
+
+.chapter-heading {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'Bungee Inline', cursive;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(228, 156, 0);
+}

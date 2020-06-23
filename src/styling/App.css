@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    /* box-sizing: border-box; */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+
+.header{
+    position: absolute;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.body{
+    display: inline-block;
+    height: 10px;
+    /* min-height: 100vh;
+    max-height: 100vh; */
+    width: 80vw;
+    height: fit-content;
+    z-index: -1;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color:#2F0C29;
+}
+
+
+body {
+    /* background-image: url(/src/styling/backGround.jpeg) !important;  */
+    display: flex;
+    background: rgb(93,39,119); 
+    background: linear-gradient(180deg, rgba(93,39,119,1) 0%, rgba(139,53,179,1) 10%, rgba(255,150,150,1) 38%);
+    /* background-color:#9135bb; */
+    background-attachment: fixed;
+    z-index: -1;
+    /* height: 100; */
+    /* height: auto; */
+} 
+
+/* body {
+    color: rgb(29, 22, 22);
+    background-color:#F2FDFF;
+    background-image: url('/Images_SVG_Matthew/backGround.svg');
+    background-attachment: fixed;
+    z-index: -1;
+} */
+
+/* .wrapper{
+    font-family: 'Bungee Inline', cursive;
+    font-style: Open Sans;
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #2F0C29;
+} */
+
+.chapter-text {
+    font-family: Open sans;
+    font-size: 20px;
+    color: rgba(242, 253, 255, 0.863);
+    padding-bottom: 100px;
+}
+
+.chapter-text p{
+    font-size: 15pt !important;
+    margin-bottom: 15pt !important;
+}
+
+.chapter-text p span{
+    font-family: Open sans;
+    /* font-weight: bold; */
+    font-size: 20px;
+}
+
+.chapter-text p sup {
+    font-family: Open sans;
+    font-size:15px; 
+    vertical-align:super;
+}
+
+
+.chapter-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0;
+    font-family: 'Bungee Inline', cursive;
+    padding: 5vw;
+    font-size: 70px;
+    font-weight: 600;
+    color: rgb(228, 156, 0);
+}
+
+.layer-1{
+    position: relative;
+    z-index: 10;
+}
+
+.layer-2{
+    position: relative;
+    z-index: 0;
+}
+
+
+/* ------ MOBILE STYLING ------ */
+
+@media screen and (max-width: 768px){
+
+    body{
+        width: 95vw;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .App{
+        width: 100vw;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .chapter-heading{
+        padding-top: 30px;
+        padding-bottom: 60px;
+        font-size: 40px;
+    }
+}

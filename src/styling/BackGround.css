@@ -1,0 +1,55 @@
+
+.svg__background{
+    width: 100vw;
+}
+
+#cloud_1{
+    animation: cloud_close 7s ease infinite  alternate-reverse;
+}
+#cloud_2{
+    animation: cloud_far 70s ease infinite alternate;
+    
+}
+#cloud_3{
+    animation: cloud_far 84s ease infinite alternate;
+}
+#cloud_4{
+    animation: cloud_close 10s ease infinite alternate;
+}
+#cloud_5{
+    animation: cloud_close 23s ease infinite alternate;
+}
+
+
+@keyframes cloud_close {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(100px);
+    }
+}
+
+@keyframes cloud_far {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(200px);
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh
+    }
+    .svg__background{
+        width: 220vw;
+        transform: translateX(-27%);
+        overflow-x: hidden;
+    }
+}
+

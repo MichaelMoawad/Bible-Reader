@@ -1,0 +1,55 @@
+
+.ui.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10pt;
+    padding-bottom: 20pt;
+    font-size: 3vh;
+    width: 80%;
+    margin: 0;
+}
+
+.ui.buttons.LR{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.ui.button{  
+    cursor: pointer;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background-color: rgb(228, 156, 0);  
+    color: rgba(224, 224, 224, 0.712);
+    font-family: 'Bungee Inline', cursive;
+    font-size: 1.8vh;
+    margin: 0.5em .2em 0 .2em;
+    padding-top: 0.785714em;
+    padding-right: 1.0em;
+    padding-bottom: 0.785714em;
+    padding-left: 1.0em;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.ui.button:hover{
+    background-color: rgb(255, 176, 6);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px){
+    .ui.button{  
+        width: 30%;
+        font-size: 3.5vh;
+    }
+}

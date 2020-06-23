@@ -52,26 +52,18 @@ const App = () => {
     useEffect(() => {
         setLoading(true)
         fetchData()
+        
+        // This is a test
 
-        // Update Book from NavBar
-        
-        
-        
+
+
     }, [currentChapter])
-    // }, [book, currentChapter])
     
     if(loading === true){
         return <Loading />
     }
 
-    // return (
-    //     <div className="App">
-    //         <Route exact path="/Home" component={Home} />
-    //         <Route path="/Book" component={Chapter} />
-    //         <Home />
-    //         <Chapter />
-    //     </div>
-    // );
+   
 
 
     return (

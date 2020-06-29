@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
 import "./styling/App.css";
-import DailyVerse from "./components/DailyVerse";
+// import DailyVerse from "./components/DailyVerse";
 import BackGround from "./components/BackGround";
 import NewNavBar from "./components/NewNavBar";
 import Loading from "./components/Loading";
@@ -50,40 +51,44 @@ const App = () => {
 
     return (
         <div className="App">
-            <div className="home">
-                <NewNavBar
-                    setBookandChapters={(value) => {
-                        setBook(value[0], setNumberOfChapters(value[1]));
-                    }}
-                    numberOfChapters={numberOfChapters}
-                    setTheCurrentChapter={(value) => setCurrentChapter(value)}
-                />
-                <div className="header">
-                    <div>
-                        {/* <Route path="/Home" component={DailyVerse} /> */}
+            <Router>
+                <div className="home">
+                    <NewNavBar
+                        setBookandChapters={(value) => {
+                            setBook(value[0], setNumberOfChapters(value[1]));
+                        }}
+                        numberOfChapters={numberOfChapters}
+                        setTheCurrentChapter={(value) =>
+                            setCurrentChapter(value)
+                        }
+                    />
+                    <div className="header">
+                        <div>
+                            {/* <Route path="/Home" component={DailyVerse} /> */}
+                        </div>
+                        <Route path="/Home" component={BackGround} />
                     </div>
-                    <Route path="/Home" component={BackGround} />
                 </div>
-            </div>
-            <div className="body">
-                <Route path="/Loading" component={Loading} />
-                <Route path="/Home" component={HowToReadBible} />
-                <Route path="/Book">
-                    <div className="chapter-heading">{book}</div>
-                    <div
-                        className="chapter-text"
-                        dangerouslySetInnerHTML={{ __html: chapterText }}
-                    />
-                    <PaginationLeftRight
-                        nextChapter={() =>
-                            setCurrentChapter(currentChapter + 1)
-                        }
-                        previousChapter={() =>
-                            setCurrentChapter(currentChapter - 1)
-                        }
-                    />
-                </Route>
-            </div>
+                <div className="body">
+                    <Route path="/Loading" component={Loading} />
+                    <Route path="/Home" component={HowToReadBible} />
+                    <Route path="/Book">
+                        <div className="chapter-heading">{book}</div>
+                        <div
+                            className="chapter-text"
+                            dangerouslySetInnerHTML={{ __html: chapterText }}
+                        />
+                        <PaginationLeftRight
+                            nextChapter={() =>
+                                setCurrentChapter(currentChapter + 1)
+                            }
+                            previousChapter={() =>
+                                setCurrentChapter(currentChapter - 1)
+                            }
+                        />
+                    </Route>
+                </div>
+            </Router>
         </div>
     );
 };

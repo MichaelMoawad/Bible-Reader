@@ -1,0 +1,85 @@
+.chapter-text-home {
+    font-family: Open sans;
+    font-size: 24px;
+    color: rgba(242, 253, 255, 0.863);
+    padding-bottom: 100px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+.chapter-heading-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0;
+    font-family: "Bungee Inline", cursive;
+    padding: 5vw;
+    padding-top: 0;
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(228, 156, 0);
+}
+
+.LP-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    padding-bottom: 50px;
+    margin: 0em;
+}
+
+.LP-logo-img {
+    opacity: 1;
+    width: 700px;
+}
+
+.LP-logo-img:hover {
+    -webkit-filter: brightness(120%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.LP-image {
+    height: 400px;
+    transition: 0.5s;
+    /* padding: 10px; */
+    margin: 10px;
+}
+
+.LP-image:hover {
+    height: 500px;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 55px -13px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 55px -13px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 55px -13px rgba(0, 0, 0, 1);
+}
+
+.living-and-powerful .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .chapter-text-home {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .LP-image {
+        height: 300px;
+    }
+    .LP-image:hover {
+        height: 320px;
+    }
+    .LP-logo-img {
+        width: 300px;
+    }
+    .living-and-powerful .images {
+        padding-bottom: 100px;
+    }
+}

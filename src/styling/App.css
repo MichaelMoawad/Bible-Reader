@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -10,41 +9,46 @@
     content: "";
     display: table;
     clear: both;
-} 
+}
 
-.header{
-    position: absolute;
+.header {
+    position: relative;
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     z-index: 1;
 }
 
-.body{
+.body {
     display: inline-block;
     height: 10px;
     /* min-height: 100vh;
     max-height: 100vh; */
     width: 80vw;
+    min-height: 100vh;
     height: fit-content;
     z-index: -1;
     padding-left: 10vw;
     padding-right: 10vw;
-    background-color:#2F0C29;
+    background-color: #2f0c29;
 }
-
 
 body {
     /* background-image: url(/src/styling/backGround.jpeg) !important;  */
     display: flex;
-    background: rgb(93,39,119); 
-    background: linear-gradient(180deg, rgba(93,39,119,1) 0%, rgba(139,53,179,1) 10%, rgba(255,150,150,1) 38%);
+    background: rgb(93, 39, 119);
+    background: linear-gradient(
+        180deg,
+        rgba(93, 39, 119, 1) 0%,
+        rgba(139, 53, 179, 1) 10%,
+        rgba(255, 150, 150, 1) 38%
+    );
     /* background-color:#9135bb; */
     background-attachment: fixed;
     z-index: -1;
     /* height: 100; */
     /* height: auto; */
-} 
+}
 
 /* body {
     color: rgb(29, 22, 22);
@@ -72,12 +76,12 @@ body {
     padding-bottom: 100px;
 }
 
-.chapter-text p{
+.chapter-text p {
     font-size: 15pt !important;
     margin-bottom: 15pt !important;
 }
 
-.chapter-text p span{
+.chapter-text p span {
     font-family: Open sans;
     /* font-weight: bold; */
     font-size: 20px;
@@ -85,10 +89,9 @@ body {
 
 .chapter-text p sup {
     font-family: Open sans;
-    font-size:15px; 
-    vertical-align:super;
+    font-size: 15px;
+    vertical-align: super;
 }
-
 
 .chapter-heading {
     display: flex;
@@ -96,43 +99,51 @@ body {
     align-items: center;
     padding-top: 0px;
     padding-bottom: 0;
-    font-family: 'Bungee Inline', cursive;
+    font-family: "Bungee Inline", cursive;
     padding: 5vw;
     font-size: 70px;
     font-weight: 600;
+    text-align: center;
     color: rgb(228, 156, 0);
 }
 
-.layer-1{
+.layer-1 {
     position: relative;
     z-index: 10;
 }
 
-.layer-2{
+.layer-2 {
     position: relative;
     z-index: 0;
 }
 
-
 /* ------ MOBILE STYLING ------ */
 
-@media screen and (max-width: 768px){
-
-    body{
+@media screen and (max-width: 768px) {
+    body {
         width: 95vw;
         height: 100vh;
         overflow-x: hidden;
     }
 
-    .App{
+    .App {
         width: 100vw;
         overflow-x: hidden;
         height: 100vh;
     }
 
-    .chapter-heading{
+    .chapter-heading {
         padding-top: 30px;
         padding-bottom: 60px;
         font-size: 40px;
     }
 }
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+/* .img_1 {
+    background-image: url("./Living\ and\ Powerful\ Illustrations/IMG_0533.JPG");
+} */

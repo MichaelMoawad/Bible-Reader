@@ -1,9 +1,9 @@
-
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css');
+@import url("https://fonts.googleapis.com/css?family=Open Sans");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/loader.min.css");
 
 * {
     margin: 0;
@@ -19,13 +19,7 @@
     z-index: -1;
 } */
 
-  
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
-
-
-
-
-

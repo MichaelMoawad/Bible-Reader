@@ -1,4 +1,4 @@
-.verse__description{
+.verse__description {
     display: flex;
     justify-content: center;
     padding-right: 20%;
@@ -6,8 +6,8 @@
     font-size: 60px;
     text-align: center;
     opacity: 0.8;
-    color: #68062C;
-    font-family: 'Yellowtail', cursive;
+    color: #68062c;
+    font-family: "Yellowtail", cursive;
     /* position: relative; */
     /* z-index: -1; */
 }
@@ -16,7 +16,7 @@
     justify-content: center;
     /* padding-top: 0; */
     padding-bottom: 0;
-    font-family: 'Bungee Inline', cursive;
+    font-family: "Bungee Inline", cursive;
     /* padding: 20px; */
     padding-top: 60px;
     font-size: 30px;
@@ -25,18 +25,19 @@
     /* z-index: -1; */
 }
 
-@media screen and (max-width: 1024px){
-    .verse__description{
+@media screen and (max-width: 1024px) {
+    .verse__description {
+        position: relative;
         padding-right: 10%;
         padding-left: 10%;
-        font-size: 50px
+        font-size: 45px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .verse__description{
+@media screen and (max-width: 768px) {
+    .verse__description {
         padding-right: 10%;
         padding-left: 10%;
-        font-size: 50px
+        font-size: 34px;
     }
 }

@@ -9,6 +9,13 @@ function MenuItem(props) {
     const [subMenuStyle, setSubMenuStyle] = useState("");
     const [arrowDirection, setArrowDirection] = useState("down");
 
+    // could potentially create a new state here for books so that when a book is clicked (line 31) the NavBar book state is updated
+    // after that, when the page number is clicked, the book and chapter are updated simultaneously, not on seperate occasions
+
+    // update of book state will be within the MenuItem.js file
+    // update of chapter state will be in pagination
+    // onClick within pagination should set both the Book and CurrentChapter
+
     const toggleSubMenu = () => {
         if (!subMenu) {
             setSubMenu(true);

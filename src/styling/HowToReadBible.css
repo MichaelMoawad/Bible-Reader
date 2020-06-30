@@ -35,11 +35,11 @@
     width: 700px;
 }
 
-.LP-logo-img:hover {
-    -webkit-filter: brightness(120%);
+/* .LP-logo-img:hover {
     transition: 0.3s;
     cursor: pointer;
-}
+    -webkit-filter: brightness(120%);
+} */
 
 .LP-image {
     height: 400px;

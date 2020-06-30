@@ -19,6 +19,31 @@ const App = () => {
     const [loading, setLoading] = useState(false);
     const [currentChapter, setCurrentChapter] = useState(1);
 
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         console.log(`this function has run`);
+    //         console.log(`${book}${currentChapter}`);
+    //         console.log(chapterText);
+    //         const res = await axios.get(
+    //             `https://api.biblia.com//v1/bible/content/KJV1900.html`,
+    //             {
+    //                 params: {
+    //                     passage: `${book}${currentChapter}`,
+    //                     style: "fullyFormatted",
+    //                     key: KEY,
+    //                 },
+    //             }
+    //         );
+    //         setChapterText(res.data);
+    //         setLoading(false);
+    //     };
+
+    //     setLoading(true);
+    //     fetchData();
+    // }, [currentChapter]);
+
+    // ORIGINAL CODE -------------------------------------------------
+
     const fetchData = async () => {
         console.log(`this function has run`);
         console.log(`${book}${currentChapter}`);
@@ -41,6 +66,8 @@ const App = () => {
         setLoading(true);
         fetchData();
     }, [currentChapter]);
+
+    // ORIGINAL CODE -------------------------------------------------
 
     if (loading === true) {
         console.log("loading");

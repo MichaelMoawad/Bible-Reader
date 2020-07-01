@@ -320,8 +320,8 @@ function NewNavBar(props) {
                 <div className="line2"></div>
                 <div className="line3"></div>
             </div>
-            <a href="#/Home" className="logo">
-                <Link to="/Home" className="logo">
+            <a href="#/" className="logo">
+                <Link to="/" className="logo">
                     Bible Reader
                 </Link>
             </a>

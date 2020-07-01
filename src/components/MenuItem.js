@@ -21,21 +21,21 @@ function MenuItem(props) {
             setSubMenu(true);
             setSubMenuStyle("-expanded");
             setArrowDirection("up");
-            console.log("sub menu now active");
+            // console.log("sub menu now active");
         } else {
             setSubMenu(false);
             setSubMenuStyle("");
             setArrowDirection("down");
-            console.log("sub menu now NOT active");
+            // console.log("sub menu now NOT active");
         }
     };
 
     return (
         <div className="menu-item">
             <li onClick={() => toggleSubMenu()}>
-                <a href="#/Book" onClick={props.setBookandChapters}>
+                <a href="#/book" onClick={props.setBookandChapters}>
                     <Link
-                        to={`/Book/${props.book}`}
+                        to={`/book/${props.book}`}
                         className="bible__book"
                         style={{ textDecoration: "none" }}
                     >

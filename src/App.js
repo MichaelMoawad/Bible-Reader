@@ -88,7 +88,7 @@ const App = () => {
     };
 
     const goToPrevChapter = () => {
-        if (1 < currentChapter && currentChapter < numberOfChapters) {
+        if (1 < currentChapter && currentChapter <= numberOfChapters) {
             setCurrentChapter(currentChapter - 1);
         } else if (currentChapter === 1) {
             console.log("on first chapter");

@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 import HowToReadBible from "./components/HowToReadBible";
 import PaginationLeftRight from "./components/PaginationLeftRight";
 import PageNotFound from "./components/PageNotFound";
+import test from "./components/test";
 
 const KEY = "fd37d8f28e95d3be8cb4fbc37e15e18e";
 

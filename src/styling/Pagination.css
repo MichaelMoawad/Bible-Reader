@@ -55,7 +55,14 @@
 
 @media screen and (max-width: 768px) {
     .ui.button {
-        width: 18%;
+        width: 50px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ui.button {
+        width: 50px;
         font-size: 15px;
     }
 }

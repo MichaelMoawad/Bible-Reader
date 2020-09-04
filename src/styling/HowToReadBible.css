@@ -103,6 +103,10 @@
     .living-and-powerful .images {
         padding-bottom: 100px;
     }
+    .iframe-video {
+        height: 400px;
+        padding-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -138,5 +142,10 @@
     }
     .living-and-powerful .images {
         padding-bottom: 100px;
+    }
+    .iframe-video {
+        width: 400px;
+        height: 200px;
+        padding-bottom: 20px;
     }
 }

@@ -17,6 +17,7 @@ const DailyReflection = () => {
             </p>
             <div className="video">
                 <iframe
+                    className="iframe-video"
                     title="Embeded-youtube-video"
                     width="1000"
                     height="562"

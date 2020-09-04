@@ -104,19 +104,19 @@ nav {
     transition: 0.3s ease all;
 }
 
-/* @media screen and (min-width:768px){
-    body{
+@media screen and (min-width: 768px) {
+    body {
         overflow-x: hidden;
     }
 
-    .nav-links{
+    .nav-links {
         position: absolute;
         left: 0px;
         height: auto;
         width: 100%;
         top: 8vh;
-        background-color: #2F0C29;
-        display: flex ;
+        background-color: #2f0c29;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding-left: 70px;
@@ -125,12 +125,12 @@ nav {
         transition: transform 0.5s ease;
     }
 
-    .nav-links h4{
+    .nav-links h4 {
         padding-top: 30px;
         padding-bottom: 1px;
     }
 
-    .nav-links li{
+    .nav-links li {
         padding-bottom: 6px;
         opacity: 0.9;
     }
@@ -139,7 +139,7 @@ nav {
         left: 0px;
         opacity: 1;
     }
-} */
+}
 
 @media screen and (max-width: 768px) {
     body {

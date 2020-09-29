@@ -7,12 +7,16 @@
     padding-right: 8vw;
 }
 
+.video {
+    padding-bottom: 30px;
+}
+
 .homepage-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 0px;
-    padding-bottom: 0;
+    padding-bottom: 0px;
     font-family: "Bungee Inline", cursive;
     padding: 5vw;
     padding-top: 0;

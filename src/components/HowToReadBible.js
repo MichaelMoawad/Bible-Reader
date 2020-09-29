@@ -28,12 +28,22 @@ const DailyReflection = () => {
                 ></iframe>
             </div>
             <div className="living-and-powerful">
-                <h1 className="homepage-heading">Living and Powerful</h1>
+                <h1
+                    className="homepage-heading"
+                    style={{ paddingBottom: "10px" }}
+                >
+                    Living and Powerful
+                </h1>
                 <h4 className="homepage-text">
                     Check out the amazing work done by our friends over at
                     Living and Powerful!
                 </h4>
-                <h3 className="homepage-heading side">A word from Cumi</h3>
+                <h3
+                    className="homepage-heading side"
+                    style={{ paddingBottom: "10px", paddingTop: "10px" }}
+                >
+                    A word from Cumi
+                </h3>
                 <p className="homepage-text">
                     "Help us achieve our target and become one of the first
                     people to experience the Living and Powerful Bible cards. In

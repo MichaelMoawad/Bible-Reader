@@ -5,9 +5,11 @@ import "./styling/App.css";
 import BackGround from "./components/BackGround";
 import NewNavBar from "./components/NewNavBar";
 import Loading from "./components/Loading";
-import HowToReadBible from "./components/HowToReadBible";
 import PaginationLeftRight from "./components/PaginationLeftRight";
 import PageNotFound from "./components/PageNotFound";
+import BibleOverviewPage from "./components/BibleOverviewPage";
+
+  
 
 
 const App = () => {
@@ -84,7 +86,7 @@ const App = () => {
                 <div className="body">
                     <Switch>
                         <Route path="/loading" component={Loading} />
-                        <Route exact path="/" component={HowToReadBible} />
+                        <Route exact path="/" component={BibleOverviewPage} />
                         <Route path="/book">
                             <div className="chapter-heading">{book}</div>
                             <div className="chapter-text">

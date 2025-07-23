@@ -5,6 +5,13 @@
     /* box-sizing: border-box; */
 }
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
 .clearfix::after {
     content: "";
     display: table;
@@ -19,22 +26,37 @@
     z-index: 1;
 }
 
-.body {
+/* .body {
     display: inline-block;
     height: 10px;
-    /* min-height: 100vh;
-    max-height: 100vh; */
     width: 80vw;
     min-height: 100vh;
+    max-width: 1240px;
     height: fit-content;
     z-index: -1;
     padding-left: 10vw;
     padding-right: 10vw;
     background-color: #2f0c29;
-}
+} */
+
+.body {
+    display: flex;
+    justify-content: center;
+    background-color: #2f0c29;
+    padding: 0 1rem;
+  }
+  
+  .body > div {
+    width: 100%;
+    max-width: 1640px;
+    padding: 0vw 10vw 20vw 10vw;
+    box-sizing: border-box;
+  }
+  
 
 body {
     /* background-image: url(/src/styling/backGround.jpeg) !important;  */
+    overflow-x: hidden;
     display: flex;
     background: rgb(93, 39, 119);
     background: linear-gradient(
@@ -56,17 +78,6 @@ body {
     background-image: url('/Images_SVG_Matthew/backGround.svg');
     background-attachment: fixed;
     z-index: -1;
-} */
-
-/* .wrapper{
-    font-family: 'Bungee Inline', cursive;
-    font-style: Open Sans;
-    font-weight: 400;
-    margin-top: 0;
-    padding-top: 0;
-    padding-left: 8%;
-    padding-right: 8%;
-    background-color: #2F0C29;
 } */
 
 .chapter-text {
@@ -93,7 +104,7 @@ body {
     vertical-align: super;
 }
 
-.chapter-heading {
+h2.chapter-heading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,11 +112,96 @@ body {
     padding-bottom: 0px;
     font-family: "Bungee Inline", cursive;
     padding: 5vw;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 600;
     text-align: center;
     color: rgb(228, 156, 0);
 }
+
+h3.chapter-heading {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: "Bungee Inline", cursive;
+    padding: 0vw 0vw 2vw;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    color: rgb(228, 156, 0);
+}
+
+.info-heading {
+    font-size: 28px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: "Bungee Inline", cursive;
+    padding: 5vw;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(228, 156, 0);
+} 
+
+.section-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0vh 0vh 10vh 0;
+    flex-wrap: wrap;
+  }
+  
+  .section-wrapper.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .section-content {
+    flex: 1 1 400px;
+  }
+  
+  .section-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
+  
+  .section-image img {
+    width: 160%;
+    height: auto;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  .section-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .section-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .section-content li {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .inner-section{
+      /* background-color: rgb(47 12 41); */
+      background-color: rgb(53 35 61);
+      border-radius: 10px;
+    z-index: 3;
+    padding: 45px;
+    box-shadow: 40px 40px 0px 0px #1e0915d7;
+    border: 4px solid rgb(0 0 0 / 50%);
+  }
 
 .layer-1 {
     position: relative;
@@ -137,12 +233,36 @@ body {
         padding-bottom: 60px;
         font-size: 40px;
     }
+    
+    .section-wrapper {
+        flex-direction: column;
+    }
+    
+    .section-wrapper.reverse {
+        flex-direction: column;
+    }
+    
+    .info-heading {
+        font-size: 28px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-family: "Bungee Inline", cursive;
+        padding: 5vw;
+        font-weight: 600;
+        text-align: center;
+        color: rgb(228, 156, 0);
+    } 
 }
 
 .video {
     display: flex;
     justify-content: center;
+    padding: 200px 0px 200px 0px;
 }
+
 
 /* .img_1 {
     background-image: url("./Living\ and\ Powerful\ Illustrations/IMG_0533.JPG");

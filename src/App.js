@@ -23,10 +23,9 @@ const App = () => {
     
         try {
             const res = await axios.get(
-                `https://cdn.jsdelivr.net/gh/wldeh/bible-api/bibles/${version}/books/${book.toLowerCase()}/chapters/${chapter}.json`
+                `https://cdn.jsdelivr.net/gh/wldeh/bible-api/bibles/${version}/books/${book.toLowerCase().replace(/\s/g, "")}/chapters/${chapter}.json`
             );
             setChapterText(res.data);
-            console.log(res.data);
         } catch (error) {
             console.error("Failed to fetch:", error);
             setChapterText("Error loading verse. Please try another.");
@@ -90,7 +89,6 @@ const App = () => {
                             <div className="chapter-heading">{book}</div>
                             <div className="chapter-text">
                                 {Array.isArray(chapterText.data) && chapterText.data.map((verseObj, index) => (
-                                    console.log('verseObj', verseObj),
                                     <p key={index}>
                                     <sup>{verseObj.verse}</sup> {verseObj.text}
                                     </p>

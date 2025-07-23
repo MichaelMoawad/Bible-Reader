@@ -9,9 +9,6 @@ import PaginationLeftRight from "./components/PaginationLeftRight";
 import PageNotFound from "./components/PageNotFound";
 import BibleOverviewPage from "./components/BibleOverviewPage";
 
-  
-
-
 const App = () => {
     const [chapterText, setChapterText] = useState("");
     const [numberOfChapters, setNumberOfChapters] = useState(28);
@@ -83,12 +80,12 @@ const App = () => {
                         </Switch>
                     </div>
                 </div>
-                <div className="body">
+                <div className="body-reading">
                     <Switch>
                         <Route path="/loading" component={Loading} />
                         <Route exact path="/" component={BibleOverviewPage} />
                         <Route path="/book">
-                            <div className="chapter-heading">{book}</div>
+                            <div className="chapter-heading-reading">{book}</div>
                             <div className="chapter-text">
                                 {Array.isArray(chapterText.data) && chapterText.data.map((verseObj, index) => (
                                     <p key={index}>

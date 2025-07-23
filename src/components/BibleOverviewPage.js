@@ -5,8 +5,6 @@ import "../styling/App.css";
 import {
   WhatIsTheBible,
   BibleStructure,
-  TestamentDifference,
-  Gospels,
   WhoIsJesus,
   GospelSummary,
   HowToRead,
@@ -20,8 +18,6 @@ const BibleOverviewPage = () => {
     <div>
       <WhatIsTheBible />
       <BibleStructure />
-      {/* <TestamentDifference />
-      <Gospels /> */}
       <WhoIsJesus />
       <GospelSummary />
       <HowToRead />

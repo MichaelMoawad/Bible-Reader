@@ -26,18 +26,18 @@ html, body {
     z-index: 1;
 }
 
-/* .body {
+.body-reading {
     display: inline-block;
     height: 10px;
     width: 80vw;
     min-height: 100vh;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     height: fit-content;
     z-index: -1;
     padding-left: 10vw;
     padding-right: 10vw;
     background-color: #2f0c29;
-} */
+}
 
 .body {
     display: flex;
@@ -233,6 +233,18 @@ h3.chapter-heading {
         padding-bottom: 60px;
         font-size: 40px;
     }
+
+    h2.chapter-heading {
+
+        font-size: 30px;
+
+    }
+    
+    h3.chapter-heading {
+
+        font-size: 20px;
+
+    }
     
     .section-wrapper {
         flex-direction: column;
@@ -240,6 +252,10 @@ h3.chapter-heading {
     
     .section-wrapper.reverse {
         flex-direction: column;
+    }
+
+    .section-image img {
+        width: 20%;
     }
     
     .info-heading {

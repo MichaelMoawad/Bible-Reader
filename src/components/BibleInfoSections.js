@@ -94,23 +94,27 @@ export const BibleStructure = () => (
 
     <div className="inner-section" >
     <h3 className="chapter-heading">"How is the Bible Split Up?"</h3>
-    
-    <p>The Bible is divided into two main sections: the <strong>Old Testament</strong> and the <strong>New Testament</strong>. The Old Testament contains 39 books and lays the foundation for God’s promises and relationship with His people. It includes the Law (like Genesis and Exodus), wisdom (like Proverbs), and prophets (like Isaiah).</p>
-    <p>The New Testament contains 27 books, beginning with the life of Jesus and continuing through the early Church. Together, the 66 books of the Bible form a rich, interconnected narrative filled with history, poetry, prophecy, and hope.</p>
+
+    <div style={{marginBottom: "50px"}}>
+        <p>The Bible is divided into two main sections: the <strong>Old Testament</strong> and the <strong>New Testament</strong>. The Old Testament contains 39 books and lays the foundation for God’s promises and relationship with His people. It includes the Law (like Genesis and Exodus), wisdom (like Proverbs), and prophets (like Isaiah).</p>
+        <p>The New Testament contains 27 books, beginning with the life of Jesus and continuing through the early Church. Together, the 66 books of the Bible form a rich, interconnected narrative filled with history, poetry, prophecy, and hope.</p>
+    </div>
 
 
 
     <h3 className="chapter-heading">"Old vs New Testament"</h3>
 
-    <p>The <strong>Old Testament</strong> looks forward — full of longing, promises, and shadows of what is to come. It shows humanity's need for rescue and God's faithfulness to His covenant people.</p>
-    <p>The <strong>New Testament</strong> is the fulfillment of that longing. Jesus steps into history, fulfilling prophecy and revealing God in flesh. It brings clarity to the promises and hope foreshadowed in the Old Testament, showing us the depth of God’s love through the life, death, and resurrection of Christ.</p>
+    <div style={{marginBottom: "50px"}}>
+        <p>The <strong>Old Testament</strong> looks forward — full of longing, promises, and shadows of what is to come. It shows humanity's need for rescue and God's faithfulness to His covenant people.</p>
+        <p>The <strong>New Testament</strong> is the fulfillment of that longing. Jesus steps into history, fulfilling prophecy and revealing God in flesh. It brings clarity to the promises and hope foreshadowed in the Old Testament, showing us the depth of God’s love through the life, death, and resurrection of Christ.</p>
+    </div>
 
-
-    title="What are the Gospels?"
     <h3 className="chapter-heading">"What are the Gospels?"</h3>
 
-    <p>The Gospels — Matthew, Mark, Luke, and John — are biographies of Jesus. They were written by those who walked with Him or were close to His disciples. Each Gospel provides a unique angle on who Jesus is, what He did, and what He taught.</p>
-    <p>They’re not just stories. They’re transformative accounts meant to reveal Jesus as the Messiah and invite us into a new kind of life.</p>
+    <div style={{marginBottom: "50px"}}>
+        <p>The Gospels — Matthew, Mark, Luke, and John — are biographies of Jesus. They were written by those who walked with Him or were close to His disciples. Each Gospel provides a unique angle on who Jesus is, what He did, and what He taught.</p>
+        <p>They’re not just stories. They’re transformative accounts meant to reveal Jesus as the Messiah and invite us into a new kind of life.</p>
+    </div>
     </div>
   </SectionWrapper>
 );

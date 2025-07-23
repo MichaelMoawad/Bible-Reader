@@ -73,7 +73,7 @@ const App = () => {
 
     if (loading === true) {
         // console.log("loading");
-        return <Loading />;
+        // return <Loading />;
     } else {
         // console.log("not loading?");
     }

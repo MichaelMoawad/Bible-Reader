@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 import "./styling/App.css";
-// import DailyVerse from "./components/DailyVerse";
 import BackGround from "./components/BackGround";
 import NewNavBar from "./components/NewNavBar";
 import Loading from "./components/Loading";
 import HowToReadBible from "./components/HowToReadBible";
 import PaginationLeftRight from "./components/PaginationLeftRight";
 import PageNotFound from "./components/PageNotFound";
-import test from "./components/test";
 
-const KEY = "fd37d8f28e95d3be8cb4fbc37e15e18e";
 
 const App = () => {
     const [chapterText, setChapterText] = useState("");
@@ -21,66 +17,36 @@ const App = () => {
     const [loading, setLoading] = useState(false);
     const [currentChapter, setCurrentChapter] = useState(150);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         console.log(`this function has run`);
-    //         console.log(`${book}${currentChapter}`);
-    //         console.log(chapterText);
-    //         const res = await axios.get(
-    //             `https://api.biblia.com//v1/bible/content/KJV1900.html`,
-    //             {
-    //                 params: {
-    //                     passage: `${book}${currentChapter}`,
-    //                     style: "fullyFormatted",
-    //                     key: KEY,
-    //                 },
-    //             }
-    //         );
-    //         setChapterText(res.data);
-    //         setLoading(false);
-    //     };
-
-    //     setLoading(true);
-    //     fetchData();
-    // }, [currentChapter]);
-
-    // ORIGINAL CODE -------------------------------------------------
-
     const fetchData = async () => {
-        // console.log(`this function has run`);
-        // console.log(`${book}${currentChapter}`);
-        // console.log(chapterText);
-        const res = await axios.get(
-            `https://api.biblia.com//v1/bible/content/KJV1900.html`,
-            {
-                params: {
-                    passage: `${book}${currentChapter}`,
-                    style: "fullyFormatted",
-                    key: KEY,
-                },
-            }
-        );
-        setChapterText(res.data);
-        setLoading(false);
+        const version = "en-kjv";
+        const chapter = currentChapter.toString();
+    
+        try {
+            const res = await axios.get(
+                `https://cdn.jsdelivr.net/gh/wldeh/bible-api/bibles/${version}/books/${book.toLowerCase()}/chapters/${chapter}.json`
+            );
+            setChapterText(res.data);
+            console.log(res.data);
+        } catch (error) {
+            console.error("Failed to fetch:", error);
+            setChapterText("Error loading verse. Please try another.");
+        } finally {
+            setLoading(false);
+        }
     };
+    
 
     useEffect(() => {
         setLoading(true);
         fetchData();
     }, [currentChapter]);
 
-    // ORIGINAL CODE -------------------------------------------------
-
     if (loading === true) {
-        // console.log("loading");
-        // return <Loading />;
-    } else {
-        // console.log("not loading?");
-    }
-
-    // Next Chapter Issue -------------------------------------------------
+        return <Loading />;
+    } 
 
     const goToNextChapter = () => {
+        console.log("currentChapter", currentChapter);
         if (currentChapter < numberOfChapters) {
             setCurrentChapter(currentChapter + 1);
         } else {
@@ -97,8 +63,6 @@ const App = () => {
         }
     };
 
-    // Next Chapter Issue -------------------------------------------------
-
     return (
         <div className="App">
             <Router>
@@ -113,9 +77,6 @@ const App = () => {
                         }
                     />
                     <div className="header">
-                        <div>
-                            {/* <Route path="/Home" component={DailyVerse} /> */}
-                        </div>
                         <Switch>
                             <Route exact path="/" component={BackGround} />
                         </Switch>
@@ -127,24 +88,19 @@ const App = () => {
                         <Route exact path="/" component={HowToReadBible} />
                         <Route path="/book">
                             <div className="chapter-heading">{book}</div>
-                            <div
-                                className="chapter-text"
-                                dangerouslySetInnerHTML={{
-                                    __html: chapterText,
-                                }}
-                            />
+                            <div className="chapter-text">
+                                {Array.isArray(chapterText.data) && chapterText.data.map((verseObj, index) => (
+                                    console.log('verseObj', verseObj),
+                                    <p key={index}>
+                                    <sup>{verseObj.verse}</sup> {verseObj.text}
+                                    </p>
+                                ))}
+                            </div>
+
                             <PaginationLeftRight
                                 nextChapter={() => goToNextChapter()}
                                 previousChapter={() => goToPrevChapter()}
                             />
-                            {/* <PaginationLeftRight
-                                nextChapter={() =>
-                                    setCurrentChapter(currentChapter + 1)
-                                }
-                                previousChapter={() =>
-                                    setCurrentChapter(currentChapter - 1)
-                                }
-                            /> */}
                         </Route>
                         <Route component={PageNotFound} />
                     </Switch>

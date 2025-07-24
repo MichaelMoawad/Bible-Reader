@@ -10,19 +10,17 @@ const SectionWrapper = ({ title, imageSrc, children, reverse, center, smallHeadi
   
     // Parallax scroll effect setup for default image sections
     useEffect(() => {
-      const handleScroll = () => {
-        if (imageRef.current) {
-          const rect = imageRef.current.getBoundingClientRect();
-          const scrollOffset = rect.top * 0.2; // controls the intensity of the parallax effect
-          setOffsetY(scrollOffset);
-        }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      handleScroll(); // trigger once on mount
-  
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        const handleScroll = () => {
+          const scrollY = window.scrollY;
+          setOffsetY(scrollY * 0.1); // Adjust speed here (0.1–0.3 recommended)
+        };
+      
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+      
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+      
   
     // Center layout: text on top, video (iframe) below
     if (center) {
@@ -168,7 +166,7 @@ export const HowToRead = () => (
 );
 
 export const HowToReadVideo = () => (
-    <div className="video">
+    <div className="video" style={{ position: "relative", zIndex: 2 }}>
         <iframe
             className="iframe-video"
             title="Embeded-youtube-video"
@@ -178,6 +176,7 @@ export const HowToReadVideo = () => (
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            style={{ boxShadow: "40px 40px 0px 0px #1e0915d7"}}
         ></iframe>
     </div>
 );
@@ -199,7 +198,7 @@ export const WhatIsPrayer = () => (
 export const Translations = () => (
   <SectionWrapper
     title="Bible Translations"
-    imageSrc="/Bible-Info-Section/bible-translations.png"
+    // imageSrc="/Bible-Info-Section/bible-translations.png"
     reverse
   >
     <div className="inner-section" >
